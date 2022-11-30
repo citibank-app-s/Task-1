@@ -2,10 +2,10 @@ node{
     
    def MavenHome = tool name: 'maven3.8.5'
    
-   /*echo "The Job name is: ${env.JOB_NAME}"
+   echo "The Job name is: ${env.JOB_NAME}"
    echo "The Build number is: ${env.BUILD_NUMBER}"
    echo "The node name is: ${env.NODE_NAME}"
-   */
+   
     //check out sourcecode
     stage('checkout stage'){
     git credentialsId: '0944b3d3-8067-44eb-92e0-0fa1c6531ca8', url: 'https://github.com/citibank-app-s/maven-web-application.git'
@@ -17,12 +17,12 @@ node{
  }
  
 /* //artifacts 
- /*stage('this is for artifact'){
+   stage('this is for artifact'){
      sh "${MavenHome}/bin/mvn sonar:sonar"
  }*/
  
  //upload artifacts
- stage('this is for upload artifactsto the nexus'){
+/* stage('this is for upload artifactsto the nexus'){
 sh "${MavenHome}/bin/mvn deploy"
  }
  
