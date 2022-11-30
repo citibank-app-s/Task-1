@@ -22,7 +22,7 @@ node{
  }*/
  
  //upload artifacts
-/* stage('this is for upload artifactsto the nexus'){
+stage('this is for upload artifactsto the nexus'){
 sh "${MavenHome}/bin/mvn deploy"
  }
  
@@ -31,5 +31,5 @@ sh "${MavenHome}/bin/mvn deploy"
    sshagent(['33fe3531-ae1a-45c1-b77f-98361832d41c']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@172.31.38.137:/opt/apache-tomcat-9.0.68/webapps/"
     }
- }*/
+ }
 }
